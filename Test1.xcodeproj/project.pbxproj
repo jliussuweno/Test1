@@ -14,6 +14,8 @@
 		6F8B422D2566745400E62A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F8B422C2566745400E62A48 /* Assets.xcassets */; };
 		6F8B42302566745400E62A48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8B422E2566745400E62A48 /* LaunchScreen.storyboard */; };
 		6F8B42332566745400E62A48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B42322566745400E62A48 /* main.m */; };
+		6F8B425A2566786600E62A48 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6F8B42582566786600E62A48 /* Resources.bundle */; };
+		6F8B425B2566786600E62A48 /* libEasyAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B42592566786600E62A48 /* libEasyAuth.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		6F8B422F2566745400E62A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F8B42312566745400E62A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F8B42322566745400E62A48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6F8B42572566786600E62A48 /* EasyAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyAuth.h; sourceTree = "<group>"; };
+		6F8B42582566786600E62A48 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Resources.bundle; path = "../../../../Library/Developer/Xcode/DerivedData/EasyAuth-fchszxqmfgkwqabxwmwxrvzgmqpr/Build/Products/Debug-iphonesimulator/Resources.bundle"; sourceTree = "<group>"; };
+		6F8B42592566786600E62A48 /* libEasyAuth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEasyAuth.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F8B425B2566786600E62A48 /* libEasyAuth.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,9 @@
 		6F8B421F2566745300E62A48 /* Test1 */ = {
 			isa = PBXGroup;
 			children = (
+				6F8B42552566786600E62A48 /* include */,
+				6F8B42592566786600E62A48 /* libEasyAuth.a */,
+				6F8B42582566786600E62A48 /* Resources.bundle */,
 				6F8B42202566745300E62A48 /* AppDelegate.h */,
 				6F8B42212566745300E62A48 /* AppDelegate.m */,
 				6F8B42232566745300E62A48 /* SceneDelegate.h */,
@@ -74,6 +83,22 @@
 				6F8B42322566745400E62A48 /* main.m */,
 			);
 			path = Test1;
+			sourceTree = "<group>";
+		};
+		6F8B42552566786600E62A48 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				6F8B42562566786600E62A48 /* EasyAuth */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		6F8B42562566786600E62A48 /* EasyAuth */ = {
+			isa = PBXGroup;
+			children = (
+				6F8B42572566786600E62A48 /* EasyAuth.h */,
+			);
+			path = EasyAuth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +160,7 @@
 				6F8B42302566745400E62A48 /* LaunchScreen.storyboard in Resources */,
 				6F8B422D2566745400E62A48 /* Assets.xcassets in Resources */,
 				6F8B422B2566745300E62A48 /* Main.storyboard in Resources */,
+				6F8B425A2566786600E62A48 /* Resources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +324,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Test1",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jliussuweno.Test1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,6 +345,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Test1",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jliussuweno.Test1;
 				PRODUCT_NAME = "$(TARGET_NAME)";

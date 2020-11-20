@@ -6,9 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EasyAuth.h"
 
 @interface ViewController : UIViewController
-
+@property EasyAuth *auth;
 
 @end
 

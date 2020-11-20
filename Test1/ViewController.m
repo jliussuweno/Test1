@@ -15,7 +15,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _auth = [EasyAuth new];
+}
+- (IBAction)signupButtonPressed:(id)sender {
+    [_auth presentRegistrationInView:self];
+}
+- (IBAction)aboutusButtonPressed:(id)sender {
+    [_auth presentAboutUsInView:self];
 }
 
 
